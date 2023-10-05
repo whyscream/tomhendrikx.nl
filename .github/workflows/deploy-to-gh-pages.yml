@@ -33,13 +33,13 @@ jobs:
       - name: Install pelican
         run: pip install -r requirements.txt
       - name: Create static site
-        run: pelican site/content -o site/output -s site/publishconf.py
+        run: pelican content -o output -s publishconf.py
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: site/output
+          path: output
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
