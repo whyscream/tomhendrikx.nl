@@ -7,7 +7,7 @@ sys.path.append(os.path.dirname(__file__))
 from pelicanconf import *
 
 # If your site is available via HTTPS, make sure SITEURL begins with https://
-SITEURL = ''
+SITEURL = "https://whyscream.github.io/tomhendrikx.nl"
 RELATIVE_URLS = False
 
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
