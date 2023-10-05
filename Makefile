@@ -68,5 +68,12 @@ devserver-global:
 publish:
 	"$(PELICAN)" "$(INPUTDIR)" -o "$(OUTPUTDIR)" -s "$(PUBLISHCONF)" $(PELICANOPTS)
 
+env/bin/pelican:
+	python3 -m venv env
+	env/bin/python -m pip install -r requirements.txt
+	@echo
+	@echo "Activate the virtualenv to use the 'pelican' command"
 
-.PHONY: html help clean regenerate serve serve-global devserver publish 
+install: env/bin/pelican
+
+.PHONY: html help clean regenerate serve serve-global devserver publish install
